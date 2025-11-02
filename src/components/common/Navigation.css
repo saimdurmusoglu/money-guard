@@ -1,0 +1,49 @@
+/* src/components/common/Navigation.css */
+.main-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 400;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-icon {
+  font-size: 18px;
+  color: var(--color-white);
+}
+
+.nav-link:hover .nav-icon-wrapper {
+  background-color: var(--color-icon-violet, #734aef);
+}
+.nav-link:hover .nav-text {
+  font-weight: 700;
+}
+
+.nav-link.active .nav-icon-wrapper {
+  background-color: var(--color-icon-violet, #734aef);
+  box-shadow: 0 3px 10px rgba(74, 86, 226, 0.5);
+}
+
+.nav-link.active .nav-text {
+  font-weight: 700;
+}

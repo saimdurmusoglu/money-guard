@@ -1,0 +1,58 @@
+/* src/components/dashboard/HomeView.css */
+.home-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.home-view h2 {
+  margin: 0;
+}
+
+.home-view p {
+  margin: 0;
+  color: var(--color-white-60);
+}
+
+.home-view-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 280px;
+  flex-grow: 1;
+  min-height: 0;
+}
+
+.home-view-container > *:first-child {
+  flex-shrink: 0;
+}
+
+/* Tablet ve Masaüstü için düzenleme */
+@media (min-width: 768px) {
+  .home-view-container {
+    gap: 0;
+    max-width: none;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0;
+  }
+
+  .home-view-container .balance-card {
+    flex: 0 0 704px;
+    max-width: 704px;
+    display: none;
+  }
+
+  .home-view-container > .transactions-list-container {
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .home-view-container > .balance-card {
+    flex: 0 0 715px;
+    max-width: 715px;
+  }
+}

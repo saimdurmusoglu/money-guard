@@ -1,0 +1,269 @@
+/* EditTransactionModal.css */
+
+/* --- Mobil Stiller --- */
+.etm-modal-backdrop {
+  position: fixed;
+  top: 62px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  z-index: 1500;
+  background-image: url('/img/auth/transaction-module-image@1x.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.etm-modal-content {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  min-height: 100%;
+  padding: 28px 20px;
+  text-align: center;
+  opacity: 0;
+  animation: etm-modal-fade-in 0.3s forwards;
+}
+
+@media (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5) {
+  .etm-modal-backdrop {
+    background-image: url('/img/auth/transaction-module-image@2x.jpg');
+  }
+}
+
+@keyframes etm-modal-fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+.etm-modal-close-btn {
+  display: none;
+}
+
+.etm-modal-content h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-white);
+  margin: 0 0 40px;
+}
+
+.etm-edit-toggle-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.etm-edit-toggle-label {
+  color: var(--color-white-60);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: 700;
+}
+.etm-edit-toggle-separator {
+  color: var(--color-white-40);
+}
+.etm-edit-toggle-label.etm-active-income {
+  color: var(--color-income, #ffb627);
+}
+.etm-edit-toggle-label.etm-active-expense {
+  color: var(--color-expense, #ff868d);
+}
+
+.etm-transaction-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.etm-form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.etm-form-input,
+.etm-form-textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--color-white-40);
+  padding: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-white);
+  font-family: 'Poppins', sans-serif;
+  background: transparent;
+  outline: none;
+  padding-left: 10px;
+}
+
+.etm-form-textarea {
+  min-height: 79px;
+  resize: none !important;
+}
+
+.etm-form-input::placeholder,
+.etm-form-textarea::placeholder {
+  color: var(--color-white-60);
+}
+
+.etm-custom-date-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.etm-form-input.etm-date {
+  cursor: pointer;
+  padding-right: 30px;
+  font-weight: 400;
+}
+
+.etm-date-picker-icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: var(--color-icon-violet);
+  pointer-events: none;
+}
+
+.etm-amount-date-group {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.etm-amount {
+  font-weight: 600;
+}
+
+.etm-form-textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.etm-form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.etm-form-action-button {
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.etm-add-button {
+  background: var(--color-button-gradient);
+  color: white;
+}
+
+.etm-add-button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.etm-cancel-button {
+  background: var(--color-white, #fbfbfb);
+  color: var(--color-text-button);
+}
+
+.etm-cancel-button:hover {
+  background-color: var(--color-text-button-hover);
+  color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+  .etm-modal-backdrop {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .etm-modal-content {
+    position: relative;
+    background-image: url('/img/auth/box-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    width: 100%;
+    max-width: 540px;
+    min-height: 511px;
+    height: auto;
+    border-radius: 20px;
+    padding: 40px 73px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .etm-modal-close-btn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--color-white, #ffffff);
+  }
+
+  .etm-amount-date-group {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .etm-amount-date-group .etm-form-input {
+    width: 181px;
+    text-align: center;
+  }
+
+  .etm-amount-date-group .etm-form-input-date {
+    width: 181px;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .etm-form-textarea {
+    min-height: 32px;
+    height: 32px;
+  }
+
+  .etm-modal-close-btn {
+    display: block;
+    width: 16px;
+    height: 16px;
+  }
+
+  .etm-modal-content h2 {
+    font-size: 30px;
+  }
+
+  .etm-form-action-button {
+    max-width: 300px;
+  }
+}
+

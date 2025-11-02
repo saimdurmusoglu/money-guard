@@ -1,0 +1,54 @@
+/* src/components/common/MobileNavButtons.css */
+
+.mobile-nav-buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 32px;
+  padding: 3px 62px;
+  border-radius: 15px;
+  margin: 12px auto;
+  width: 320px;
+  max-width: 320px;
+  z-index: 2;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: #442886;
+  background-color: var(--color-white-40);
+  border-radius: 6px;
+  width: 38px;
+  height: 38px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0;
+  padding: 3px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-button:hover {
+  color: var(--color-white);
+  background-color: var(--color-icon-violet);
+}
+
+.nav-button.active {
+  color: var(--color-white);
+  background-color: var(--color-icon-violet);
+}
+
+.nav-button .icon {
+  width: 28px;
+  height: 28px;
+}
+
+@media (min-width: 768px) {
+  .mobile-nav-buttons {
+    display: none;
+  }
+}

@@ -1,0 +1,133 @@
+/* src/components/dashboard/CurrencyView.css */
+
+.currency-view-container {
+  width: 320px;
+  height: 214px;
+  margin: 0 auto;
+  padding: 0;
+  background: rgba(74, 86, 226, 0.1);
+  border-radius: 0;
+  border-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 1 9 15 rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+  padding-bottom: 90px;
+}
+
+.currency-table-wrapper {
+  position: relative;
+  width: 320px;
+  z-index: 10;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.currency-table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  color: var(--color-white);
+  background: transparent;
+  font-size: 16px;
+  line-height: normal;
+  letter-spacing: 0;
+  padding: 0;
+}
+
+.currency-table thead {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 12;
+}
+
+.currency-table thead th {
+  background-color: transparent;
+  padding: 13px 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+  z-index: 13;
+}
+
+.currency-table tbody {
+  width: 100%;
+  height: 70px;
+  z-index: 13;
+}
+
+.currency-table tbody td {
+  padding: 8px 20px 12px;
+  height: 24px;
+  font-weight: 400;
+}
+
+.currency-table th:first-child {
+  text-align: left;
+}
+
+.currency-table td:first-child {
+  text-align: left;
+}
+
+.currency-chart-area {
+  position: absolute;
+  top: 110px;
+  left: -10px;
+  right: 0;
+  bottom: 0;
+  width: 106%;
+  height: 110px;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.currency-chart-inner-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Tablet (768px) --- */
+@media (min-width: 768px) {
+  .currency-view-container {
+    width: 336px;
+  }
+
+  .currency-table-wrapper {
+    width: 336px;
+  }
+
+  .currency-table thead {
+    height: 48px;
+  }
+
+  .currency-table thead th {
+    padding: 12px 20px;
+  }
+}
+
+/* --- Desktop (1280px) --- */
+@media (min-width: 1280px) {
+  .currency-view-container {
+    width: 480px;
+  }
+
+  .currency-table-wrapper {
+    width: 480px;
+  }
+
+  .currency-table thead {
+    height: 56px;
+  }
+
+  .currency-table thead th {
+    padding: 16px 49px;
+  }
+
+  .currency-table tbody td:nth-child(1) {
+    padding-left: 70px;
+  }
+}

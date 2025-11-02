@@ -1,0 +1,133 @@
+/* LogoutModal.css */
+/* Mobil stilleri*/
+.logout-modal-backdrop {
+  position: fixed;
+  top: 62px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1600;
+  
+  background-image: url('/img/auth/box-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.logout-modal-content {
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  background: transparent;
+}
+
+.logout-logo-container {
+  display: none;
+}
+
+.logout-text2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0;
+  color: var(--color-white);
+  margin: 0 53px 40px;
+}
+
+.logout-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.logout-btn {
+  width: 100%;
+  max-width: 280px;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.logout-btn-primary {
+  background: var(--color-button-gradient);
+  color: white;
+}
+.logout-btn-primary:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn-secondary {
+  background: var(--color-white, #fbfbfb);
+  color: var(--color-text-button);
+}
+.logout-btn-secondary:hover {
+  background-color: var(--color-text-button-hover);
+  color: var(--color-white);
+}
+
+/* --- TABLET VE MASAÜSTÜ STILLERİ (768px ve üzeri) --- */
+@media (min-width: 768px) {
+  
+  .logout-modal-backdrop {
+    top: 0;
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .logout-modal-content {
+    background-image: url('/img/auth/box-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 533px;
+    max-height: 447px;
+    border-radius: 8px;
+    padding: 60px 116px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .logout-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  
+  .logout-logo-container img {
+    width: 27.37px;
+    height: 34.54px;
+  }
+
+  .logout-logo-container h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26.96px;
+    font-weight: 400;
+    color: var(--color-white);
+    margin: 0;
+  }
+
+  .logout-text2 {
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  .logout-btn {
+    min-width: 300px;
+  }
+}

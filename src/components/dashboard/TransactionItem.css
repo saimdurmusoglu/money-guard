@@ -1,0 +1,115 @@
+/* TransactionItem.css */
+
+.transaction-item-card {
+  background-color: var(--color-form, rgba(255, 255, 255, 0.1));
+  width: 100%; /* Ebeveyne uyum sağlaması için */
+  padding: 12px 0;
+  border-radius: 8px; /* Figma'daki gibi 8px yaptım, 5px yerine */
+  margin-bottom: 8px;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-left: 5px solid var(--color-yellow);
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.transaction-item-card:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.transaction-item-card.active {
+  border-left-color: var(
+    --color-dashboard-text
+  );
+}
+
+.transaction-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 12px 20px;
+  border-bottom: 1px solid var(--color-white-40);
+}
+
+.transaction-row:last-of-type,
+.transaction-actions {
+  border-bottom: none;
+}
+
+.transaction-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.transaction-value {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-white);
+  text-align: right;
+}
+
+.transaction-sum {
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.transaction-sum.income,
+.transaction-sum.expense {
+  color: var(--color-yellow);
+}
+
+.transaction-item-card.active .transaction-sum {
+  color: var(--color-dashboard-text);
+}
+
+.transaction-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 4px 12px;
+  border-radius: 18px;
+  transition: all 0.2s ease-in-out;
+}
+
+.delete-button {
+  color: #fff;
+  background: var(--color-button-gradient);
+}
+
+.delete-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.edit-button {
+  color: var(--color-white-60);
+}
+
+.edit-button:hover {
+  color: var(--color-white);
+}
+
+.edit-button .icon {
+  width: 20px;
+  height: 20px;
+  color: currentColor;
+}

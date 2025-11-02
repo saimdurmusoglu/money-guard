@@ -1,0 +1,36 @@
+/* src/components/dashboard/ButtonAddTransaction.css */
+.fab-add-transaction {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background: var(--color-button-gradient);
+  color: var(--color-white);
+
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.fab-add-transaction:hover {
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 768px) {
+  .fab-add-transaction {
+    width: 40px;
+    height: 40px;
+  }
+}

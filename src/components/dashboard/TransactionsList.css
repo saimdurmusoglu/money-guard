@@ -1,0 +1,185 @@
+/* TransactionsList.css */
+
+.transactions-list-container {
+  width: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+  min-height: 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(191, 180, 221, 1) transparent;
+}
+
+.transactions-list-container::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+.transactions-list-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.transactions-list-container::-webkit-scrollbar-thumb {
+  background-color: rgba(191, 180, 221, 1);
+  border-radius: 4px;
+}
+.transactions-list-container::-webkit-scrollbar-button {
+  display: none !important;
+}
+
+/* --- MOBİL GÖRÜNÜM --- */
+.mobile-transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 100px;
+}
+.desktop-transactions-table {
+  display: none;
+}
+.no-transactions-message {
+  color: var(--color-white-60);
+  text-align: center;
+  padding: 32px 16px;
+  font-style: italic;
+}
+
+/* --- TABLET ve ÜZERİ STILLER (768px) --- */
+@media (min-width: 768px) {
+  .mobile-transaction-list {
+    display: none;
+  }
+
+  .desktop-transactions-table {
+    display: block;
+    overflow-y: auto;
+    max-height: 312px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(191, 180, 221, 1) transparent;
+  }
+
+  .desktop-transactions-table table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    color: var(--color-white);
+    table-layout: fixed;
+  }
+
+  .desktop-transactions-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--color-content-violet, #523b7e);
+    background-image: url('/img/auth/bar.jpg');
+    box-shadow: 0 4 60 rgba(0, 0, 0, 0.25);
+  }
+
+  .desktop-transactions-table th {
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    padding: 16px 20px;
+    z-index: 1;
+    vertical-align: middle;
+  }
+
+  .desktop-transactions-table td {
+    padding: 0 20px;
+    height: 70px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+    overflow: hidden;
+  }
+
+  .desktop-transactions-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .desktop-transactions-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .desktop-transactions-table th:nth-child(1) {
+    width: 15%;
+  }
+  .desktop-transactions-table th:nth-child(2) {
+    width: 13%;
+  }
+  .desktop-transactions-table th:nth-child(3) {
+    width: 20%;
+  }
+  .desktop-transactions-table th:nth-child(4) {
+    width: 20%;
+  }
+  .desktop-transactions-table th:nth-child(5) {
+    width: 15%;
+    text-align: right;
+  }
+  .desktop-transactions-table th:nth-child(6) {
+    width: 17%;
+  }
+
+  .desktop-transactions-table .table-comment,
+  .desktop-transactions-table td:nth-child(3) {
+    white-space: normal;
+    text-overflow: ellipsis;
+  }
+
+  .desktop-transactions-table .table-sum-income {
+    color: var(--color-income, #ffb627);
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .desktop-transactions-table .table-sum-expense {
+    color: var(--color-expense, #ff868d);
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .desktop-transactions-table .table-type {
+    text-align: center;
+  }
+
+  .desktop-transactions-table .table-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .desktop-transactions-table .table-edit-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-white-60);
+    display: flex;
+    align-items: center;
+    padding: 0;
+    transition: all 0.2s ease;
+  }
+
+  .desktop-transactions-table .table-edit-btn:hover {
+    color: var(--color-white);
+  }
+
+  .desktop-transactions-table .table-delete-btn {
+    background: var(--color-button-gradient);
+    border: none;
+    cursor: pointer;
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: 400;
+    padding: 4px 12px;
+    border-radius: 18px;
+    transition: all 0.2s ease;
+  }
+
+  .desktop-transactions-table .table-delete-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+}

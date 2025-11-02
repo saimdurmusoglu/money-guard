@@ -1,0 +1,85 @@
+/* src/components/dashboard/DeleteConfirmationModal.css */
+
+/* Bu modal, LogoutModal ile aynı görünür ancak daha küçüktür */
+.del-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1600; /* Diğer modalların üstünde */
+  
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.del-modal-content {
+  background-image: url('/img/auth/box-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  width: 100%;
+  max-width: 400px; /* Logout modalından daha küçük */
+  
+  border-radius: 20px;
+  padding: 40px 20px; /* Daha az padding */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.del-modal-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-white);
+  margin: 0 0 30px; /* Daha az boşluk */
+  line-height: 1.4;
+}
+
+.del-modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.del-btn {
+  width: 100%;
+  max-width: 280px;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+/* SİL butonu (kırmızı/pembe olmalı) */
+.del-btn-primary {
+  /* Add/Logout'taki gradyan yerine 'expense' rengini kullanalım */
+  background: var(--color-button-gradient);
+  color: white;
+}
+.del-btn-primary:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(255, 134, 141, 0.3);
+}
+
+/* CANCEL butonu */
+.del-btn-secondary {
+  background: var(--color-white, #fbfbfb);
+  color: var(--color-text-button);
+}
+.del-btn-secondary:hover {
+  background-color: var(--color-text-button-hover);
+  color: var(--color-white);
+}

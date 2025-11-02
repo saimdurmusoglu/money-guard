@@ -1,0 +1,50 @@
+/* src/styles/variables.css */
+:root {
+  --color-yellow: #ffb627;
+  --color-icon-violet: #734aef;
+  --color-black: #010101;
+  --color-white: #fbfbfb;
+  --color-text-button: #623f8b;
+  --color-text-button-hover: #6f558d;
+  --color-dashboard-text: #ff868d;
+  --color-form: rgba(255, 255, 255, 0.1);
+  --color-white-40: rgba(255, 255, 255, 0.4);
+  --color-white-60: rgba(255, 255, 255, 0.6);
+  --color-content-violet: rgba(82, 59, 126, .6);
+  --color-income: #ffb627;
+  --color-expense: #ff868d;
+  --color-dropdown-background: rgba(83, 61, 186, 1);
+  --color-select-option-active: rgba(255, 255, 255, .1);
+  --color-select-option-hover: rgba(255, 255, 255, .1);
+
+  --color-button-gradient: linear-gradient(
+    37deg,
+    rgba(255, 199, 39, 1) 0%,
+    /* #ffc727 */ rgba(158, 64, 186, 1) 61%,
+    /* #9e40ba */ rgba(112, 0, 255, 1) 91% /* #7000ff */
+  );
+
+  --color-small-form-gradient: linear-gradient(
+    to top,
+    rgba(83, 61, 186, 1) 0%,
+    rgba(80, 48, 154, 1) 36%,
+    rgba(106, 70, 165, 0.75) 61%,
+    rgba(133, 93, 175, 0.19) 100%
+  );
+
+  --color-line-gradient: linear-gradient(
+    rgba(75, 30, 124, 1) 19%,
+    rgba(48, 46, 142, 1) 100%
+  );
+
+  --color-main-background-gradient: linear-gradient(
+    -91deg,
+    rgba(46, 23, 70, .5) 3%,
+    rgba(46, 34, 95, .5) 100%
+  );
+
+  --color-border-button-gradient: linear-gradient(
+    rgba(255, 255, 255, .41) 0%,
+    rgba(255, 255, 255, 1) 100%,
+  );
+}

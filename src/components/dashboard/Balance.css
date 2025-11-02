@@ -1,0 +1,60 @@
+/* src/components/dashboard/Balance.css */
+
+.balance-card {
+  background-color: var(--color-content-violet);
+  width: 280px;
+  height: 80px;
+  padding: 8px 32px;
+  border-radius: 8px;
+  margin: 0 auto 32px;
+  text-align: left;
+}
+
+.balance-label {
+  height: 13px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0;
+  color: var(--color-white-40);
+  margin-bottom: 11.8px;
+  text-transform: uppercase;
+}
+
+.balance-amount {
+  height: 36px;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 11.2px;
+  line-height: normal;
+  letter-spacing: 0;
+}
+
+.balance-amount .balance-icon {
+  font-weight: 400;
+}
+
+.balance-loading {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0;
+  color: var(--color-white-40);
+}
+
+/* --- Tablet ve Üzeri Düzenleme (768px) --- */
+@media (min-width: 768px) {
+  .balance-card {
+    width: 336px;
+    padding: 8px 40px;
+  }
+}
+
+/* --- Desktop Düzenleme (1280px) --- */
+@media (min-width: 1280px) {
+  .balance-card {
+    width: 480px;
+    padding: 8px 56px;
+  }
+}

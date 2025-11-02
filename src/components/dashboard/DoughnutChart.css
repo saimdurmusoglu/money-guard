@@ -1,0 +1,8 @@
+/* src/components/dashboard/DoughnutChart.css */
+
+.doughnut-chart-wrapper {
+    position: relative;
+    width: 280px; 
+    height: 280px;
+    margin: 10px auto; 
+}
